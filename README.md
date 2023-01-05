@@ -38,8 +38,8 @@ B - 1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town
 LSTAT - % lower status of the population
 
 MEDV - Median value of owner-occupied homes in $1000's
- 
-Aim
+
+**Aim**
 
 -->To implement a linear regression with regularization via gradient descent.
 
@@ -51,7 +51,7 @@ Aim
 
 -->All the code is written in a single python file. The python program accepts the data directory path as input where the train and test csv files reside. Note that the data directory will contain two files train.csv used to train your model and test.csv for which the output predictions are to be made. The output predictions get written to a file named output.csv. The output.csv file should have two comma separated columns [ID,Output].
 
-Working of Code
+**Working of Code**
 
 NumPy library would be required, so code begins by importing it
 Import phi and phi_test from train and test datasets using NumPy's loadtxt function
@@ -70,7 +70,7 @@ Load values of id from test data file
 Calculate y for test data using phi test and applying inverse log
 Save the ids and y according to filename from dictionary
  
-Feature Engineering
+**Feature Engineering**
 
 Columns of phi are not in same range, this is because their units are different i.e phi is ill conditioned
 
@@ -81,7 +81,7 @@ Same scaling would be required on columns of phi test
 Log scaling was used on y. This was determined by trial and error
 
 
-Comparison of performance
+**Comparison of performance**
 
 (p1=1.75, p2=1.5, p3=1.3)
 
@@ -91,7 +91,7 @@ As p decreases norm of w increases but this can be taken care by increasing lamb
 
 As p decreases number of iterations required decreases
 
-Tuning of Hyperparameter
+**Tuning of Hyperparameter**
 
 If p is fixed and lambda is increased error decreases up to a certain lambda, then it starts rising
 
@@ -100,7 +100,7 @@ So, lambda was tuned by trial and error.
 Starting with 0, lambda was increased in small steps until a minimum error was achieved.
 
 
-Comparison of L2 gradient descent and closed form
+**Comparison of L2 gradient descent and closed form**
 
 Error from L2 Gradient descent were 4.43268 and that from closed form solution was 4.52624.
 
